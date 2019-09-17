@@ -14,19 +14,19 @@ Additional ./configure switches used in this build:
 ### Install
 
 ```sh
-docker pull vargat/pmacct:latest
+docker pull vtamas/pmacct:latest
 ```
 
 ### Running
 
 Run with: 
 ```sh
-docker run --name pmacct -v /path/to/my/config:/config/nfacctd.conf vargat/pmacct:latest
+docker run --name pmacct -v /path/to/my/config:/config/nfacctd.conf vtamas/pmacct:latest
 ```
 
 alternatively you can mount the config directory, where you store other pmacct related files, like labels and mappings:
 
 ```sh
-docker run --name pmacct -v /path/to/myconfigdirector:/config vargat/pmacct:latest
+docker run --name pmacct -v /path/to/myconfigdirector:/config vtamas/pmacct:latest
 ```
 
