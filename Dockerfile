@@ -1,4 +1,4 @@
-FROM ubuntu:18.04  
+FROM ubuntu:latest 
 
 ENV pmacct_version 1.7.3
 
@@ -6,7 +6,11 @@ MAINTAINER Tamas Varga <tamas@alapzaj.com>
 LABEL maintainer="tamas@alapzaj.com"
 LABEL version="${pmacct_version}"
 LABEL description="PMACCT netflow collector in a container"
-LABEL features.label1="--enable-plabel" features.label2="--enable-postgres" feaetures.label3="--enable-rabbitmq" features.label4="--enable-jansson" features.label4="--enable-geoipv2"
+LABEL features.label1="--enable-plabel" 
+LABEL features.label2="--enable-postgres" 
+LABEL features.label3="--enable-rabbitmq" 
+LABEL features.label4="--enable-jansson" 
+LABEL features.label4="--enable-geoipv2"
 
 RUN apt-get update && apt-get install -y git libpcap0.8-dev pkgconf build-essential librabbitmq-dev libmaxminddb-dev libjansson-dev libpq5 libpq-dev libtool autoconf automake && \
 	cd /tmp && git clone https://github.com/pmacct/pmacct.git && cd /tmp/pmacct && git checkout ${pmacct_version} && \
