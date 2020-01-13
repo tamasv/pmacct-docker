@@ -1,6 +1,6 @@
 FROM ubuntu:latest 
 
-ENV pmacct_version 1.7.3
+ENV pmacct_version 1.7.4
 
 MAINTAINER Tamas Varga <tamas@alapzaj.com>
 LABEL maintainer="tamas@alapzaj.com"
