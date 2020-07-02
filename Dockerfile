@@ -1,6 +1,6 @@
-FROM ubuntu:latest 
+FROM ubuntu:bionic 
 
-ENV pmacct_version 1.7.4
+ENV pmacct_version 1.7.5
 
 MAINTAINER Tamas Varga <tamas@alapzaj.com>
 LABEL maintainer="tamas@alapzaj.com"
