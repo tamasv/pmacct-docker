@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y git libpcap0.8-dev pkgconf build-essent
 	cd /tmp && git clone https://github.com/pmacct/pmacct.git && cd /tmp/pmacct && git checkout ${pmacct_version} && \
 	cd /tmp/pmacct && \
 	./autogen.sh && \
-	./configure --enable-plabel --enable-postgres --enable-rabbitmq --enable-jansson --enable-geoipv2 && \
+	./configure --enable-plabel --enable-postgres --enable-rabbitmq --enable-jansson --enable-geoipv2 --enable-debug && \
 	make && \
 	make install && \
 	rm -rf /root/.cache && rm -rf /tmp/*  && \
