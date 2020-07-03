@@ -16,7 +16,7 @@ RUN apt-get update && apt-get dist-upgrade -y && apt-get install -y git libpcap0
 	cd /tmp && git clone https://github.com/pmacct/pmacct.git && cd /tmp/pmacct && git checkout ${pmacct_version} && \
 	cd /tmp/pmacct && \
 	./autogen.sh && \
-	./configure --enable-plabel --enable-postgres --enable-rabbitmq --enable-jansson --enable-geoipv2 --enable-debug && \
+	./configure --enable-plabel --enable-postgres --enable-rabbitmq --enable-jansson --enable-geoipv2 && \
 	make && \
 	make install && \
 	rm -rf /root/.cache && rm -rf /tmp/*  && \
